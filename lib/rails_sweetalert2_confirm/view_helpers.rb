@@ -13,11 +13,11 @@ module RailsSweetAlert2Confirm
       super value, options
     end
 
-    def button_tag(*args, &block)
-      options = args[block_given? ? 0 : 1] || {}
-      options = merge_options_into_swal(options)
-      super(*args, &block)
-    end
+    # def button_tag(*args, &block)
+    #   options = args[block_given? ? 0 : 1] || {}
+    #   options = merge_options_into_swal(options)
+    #   super(*args, &block)
+    # end
 
     private def merge_options_into_swal(options)
       return options unless options_have_confirm?(options)
